@@ -2,10 +2,30 @@
 
 `Будут проигнорированы:`
 
-1. Папка terraform и все ее содержимое
-2. Файлы состояния
-3. Файлы блокировки
-4. Файлы с чувствительными данными
-5. Файлы override
-6. Логи аварий
-7. Конфиги 
+.terraform/ — будет игнорироваться каталог .terraform
+
+*.tfstate — любые файлы с расширением .tfstate
+
+*.tfstate.* — любые файлы, у которых имя содержит .tfstate. и после этого есть ещё любой суффикс
+
+crash.log — файл с именем crash.log
+
+crash.*.log — файлы, начинающиеся с crash. и заканчивающиеся на .log
+
+*.tfvars — любые файлы с расширением .tfvars
+
+*.tfvars.json — любые файлы с расширением .tfvars.json
+
+override.tf — файл с именем override.tf
+
+override.tf.json — файл с именем override.tf.json
+
+*_override.tf — любые файлы, которые оканчиваются на _override.tf
+
+*_override.tf.json — любые файлы, которые оканчиваются на _override.tf.json
+
+.terraform.tfstate.lock.info — файл с именем .terraform.tfstate.lock.info
+
+.terraformrc — файл с именем .terraformrc
+
+terraform.rc — файл с именем terraform.rc
